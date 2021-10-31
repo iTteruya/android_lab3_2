@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lab3_2</string>
+    <string name="to_first">TO FIRST</string>
+    <string name="to_third">TO THIRD</string>
+    <string name="to_second">TO SECOND</string>
+    <string name="about">About Menu</string>
+</resources>
