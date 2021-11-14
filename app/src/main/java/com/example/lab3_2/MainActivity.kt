@@ -13,15 +13,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        toSecondButton = findViewById(R.id.toSecond)
+        toSecondButton = findViewById(R.id.bnToSecond)
         toSecondButton.setOnClickListener {
             startActivity(Intent(this, SecondActivity::class.java))
         }
 
-        val aboutMenu = findViewById<BottomNavigationView>(R.id.activity_about)
+        val aboutMenu = findViewById<BottomNavigationView>(R.id.nav_view)
         aboutMenu.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.about -> {
+                R.id.aboutActivity -> {
                     startActivity(Intent(this, AboutActivity::class.java))
                 }
             }

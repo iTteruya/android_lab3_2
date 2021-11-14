@@ -14,7 +14,7 @@ class ThirdActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.third_activity)
 
-        toFirstButton = findViewById(R.id.toFirst)
+        toFirstButton = findViewById(R.id.bnToFirst)
         toFirstButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
                 .putExtra("result", "Third to First")
@@ -22,7 +22,7 @@ class ThirdActivity: AppCompatActivity() {
             finish()
         }
 
-        toSecondButton = findViewById(R.id.toSecond)
+        toSecondButton = findViewById(R.id.bnToSecond)
         toSecondButton.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
                 .putExtra("result", "Third to Second")
@@ -30,14 +30,15 @@ class ThirdActivity: AppCompatActivity() {
             finish()
         }
 
-        val aboutMenu = findViewById<BottomNavigationView>(R.id.activity_about)
+        val aboutMenu = findViewById<BottomNavigationView>(R.id.nav_view)
         aboutMenu.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.about -> {
+                R.id.aboutActivity -> {
                     startActivity(Intent(this, AboutActivity::class.java))
                 }
             }
             true
         }
     }
+
 }

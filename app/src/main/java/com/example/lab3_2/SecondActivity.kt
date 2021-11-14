@@ -15,21 +15,20 @@ class SecondActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.second_activity)
 
-        toFirstButton = findViewById(R.id.toFirst)
+        toFirstButton = findViewById(R.id.bnToFirst)
         toFirstButton.setOnClickListener {
             finish()
         }
 
-        toThirdButton = findViewById(R.id.toThird)
+        toThirdButton = findViewById(R.id.bnToThird)
         toThirdButton.setOnClickListener {
             startActivityForResult(Intent(this, ThirdActivity::class.java), 1)
         }
 
-
-        val aboutMenu = findViewById<BottomNavigationView>(R.id.activity_about)
+        val aboutMenu = findViewById<BottomNavigationView>(R.id.nav_view)
         aboutMenu.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.about -> {
+                R.id.aboutActivity -> {
                     startActivity(Intent(this, AboutActivity::class.java))
                 }
             }
@@ -44,4 +43,5 @@ class SecondActivity: AppCompatActivity() {
             finish()
         }
     }
+
 }

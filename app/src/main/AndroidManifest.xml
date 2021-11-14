@@ -11,10 +11,12 @@
         android:theme="@style/Theme.Lab3_2">
         <activity
             android:name=".SecondActivity"
-            android:label="Second Activity"/>
+            android:label="Second Activity"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".ThirdActivity"
-            android:label="Third Activity"/>
+            android:label="Third Activity"
+            android:parentActivityName=".SecondActivity"/>
         <activity
             android:name=".AboutActivity"
             android:label="About Activity"/>
